@@ -1,0 +1,77 @@
+<div>
+<header class="toolbar toolbar-header">
+  <h3>Registration-Form</h3>
+    </header>
+</div>
+
+<div>
+  <form name="form" novalidate>  
+            
+<!-- FirstName -->
+<div class="form-group" >
+          <span class="icon icon-user"></span>&nbsp;First Name
+            <input type="text" name="first_name" id="first_name" class="form-control" ng-model="customer.first_name"   required/>
+    <span ng-show="form.$dirty && form.first_name.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.first_name.$invalid">This field is invalid </span>
+</div>
+
+<!-- LastName -->
+<div class="form-group">
+          <span class="icon icon-user"></span>&nbsp;Last Name
+        <input type="text" name="last_name" id="last_name" class="form-control" ng-model="customer.last_name" required/>
+            <span ng-show="form.$dirty && form.last_name.$error.required">This is a required field</span>
+            <span ng-show="form.$dirty && form.last_name.$invalid">This field is invalid </span>
+        </div>
+
+
+ <!--email-->
+ <div class="form-group">
+    <span class="icon icon-mail"></span>&nbsp;Email
+    <div class="col-xs-9">
+     <input type="email" class="form-control" id="email" ng-model="customer.email" name="email" class="email" placeholder="Enter your Email" required/>
+     <span ng-show="form.$dirty && form.email.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.email.$invalid">This field is invalid </span><br/><br/>
+  </div>
+  </div>
+  <!--email-->
+ <div class="form-group">
+    <span class="icon icon-key"></span>&nbsp;Password
+    <div class="col-xs-9">
+     <input type="password" class="form-control" id="password" ng-model="customer.password" name="Password" class="password" placeholder="Enter your password" required/>
+     <span ng-show="form.$dirty && form.Password.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.Password.$invalid">This field is invalid </span><br/><br/>
+  </div>
+  </div> 
+
+<!--phonenumber-->
+<div class="form-group">
+<span class="icon icon-mobile"></span>&nbsp;Phonenumber
+<div class="col-xs-9">
+<input type="number" class="form-control" id="phonenumber" ng-model="customer.phoneNumber" 
+ id="phoneNumber" name="phoneNumber"  ng-maxlength="10" required/>
+<span ng-show="form.$dirty && form.phoneNumber.$error.required">This is a required field</span>
+    <span ng-show="form.phoneNumber.$error.maxlength">Man Len is 10 required</span>
+</div>
+</div>
+
+   <!--gender-->
+<div class="form-group">
+   <label class="col-xs-3 form-control-label">Gender</label>
+  <label class="checkbox-inline">
+
+   <input type="radio" name="gender" id="gender" ng-model="customer.genderSS" value="male" required/>male
+   </label>
+    <label class="checkbox-inline">
+     <input type="radio" name="gender" id="gender" ng-model="customer.gender" value="female" required />female</label>
+    <div>
+   <span ng-show="form.$dirty && form.gender.$error.required">This is a required field</span>
+    </div>
+</div> 
+    <div class="form-group">      
+<button ng-click="save(customer)"  class="btn btn-primary" id="btnAdd" ng-disabled="form.$invalid">Add Customer</button>
+   <a href="#login"><button class="btn btn-primary" >Back </button> </a>  
+
+   <input type="reset" class="btn btn-primary"  value="Reset"/>  
+</div>
+</form>
+</div>

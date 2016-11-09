@@ -1,0 +1,72 @@
+
+<div>
+  <form name="form" novalidate>  
+            
+<!-- FirstName -->
+<div class="form-group" >
+          <span class="icon icon-user"></span>&nbsp;First Name
+            <input type="text" name="first_name" id="first_name" class="form-control" ng-model="customer.first_name"   required/>
+    <span ng-show="form.$dirty && form.first_name.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.first_name.$invalid">This field is invalid </span>
+</div>
+
+<!-- LastName -->
+<div class="form-group">
+          <span class="icon icon-user"></span>&nbsp;Last Name
+        <input type="text" name="last_name" id="last_name" class="form-control" ng-model="customer.last_name" required/>
+            <span ng-show="form.$dirty && form.last_name.$error.required">This is a required field</span>
+            <span ng-show="form.$dirty && form.last_name.$invalid">This field is invalid </span>
+        </div>
+
+
+ <!--email-->
+ <div class="form-group">
+    <span class="icon icon-mail"></span>&nbsp;Email
+    <div class="col-xs-9">
+     <input type="email" class="form-control" ng-model="customer.email" name="email"  placeholder="Enter your Email" required/>
+     <span ng-show="form.$dirty && form.email.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.email.$invalid">This field is invalid </span><br/><br/>
+  </div>
+  </div>
+  <!--email-->
+ <div class="form-group">
+    <span class="icon icon-key"></span>&nbsp;Password
+    <div class="col-xs-9">
+     <input type="password" class="form-control" ng-model="customer.password" name="Password" placeholder="Enter your password" required/>
+     <span ng-show="form.$dirty && form.Password.$error.required">This is a required field</span>
+    <span ng-show="form.$dirty && form.Password.$invalid">This field is invalid </span><br/><br/>
+  </div>
+  </div> 
+
+<!--phonenumber-->
+<div class="form-group">
+<span class="icon icon-mobile"></span>&nbsp;Phonenumber
+<div class="col-xs-9">
+<input type="text" class="form-control" ng-model="customer.phoneNumber" 
+ id="phoneNumber" name="phoneNumber" required/>
+<span ng-show="form.$dirty && form.phoneNumber.$error.required">This is a required field</span>
+<span ng-show="form.$dirty && form.phoneNumber.$invalid">This field is invalid </span>
+</div>
+</div>
+
+   <!--gender-->
+<div class="form-group">
+   <label class="col-xs-3 form-control-label">Gender</label>
+  <label class="checkbox-inline">
+
+   <input type="radio" name="gender" ng-model="customer.gender" value="male" required/>male
+   </label>
+    <label class="checkbox-inline">
+     <input type="radio" name="gender" id="inlineRadio" ng-model="customer.gender" value="female" required />female</label>
+    <div>
+   <span ng-show="form.$dirty && form.gender.$error.required">This is a required field</span>
+    </div>
+</div> 
+    <div class="form-group">   <link rel="stylesheet" href="css/photon.css" />
+     
+<button ng-click="updateCustomer(customer)"  class="btn btn-primary" ng-disabled="frm.$invalid">Update  Customer</button>
+   <a href="#home"><button class="btn btn-primary" >Back </button> </a>  
+   <input type="reset" class="btn btn-primary" value="Reset"/>  
+</div>
+</form>
+</div>

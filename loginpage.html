@@ -1,0 +1,42 @@
+
+  <div class="container">
+        <div class="row">
+            <div class="login-box col-lg-4 col-lg-offset-4 col-sm-6 col-sm-offset-3">
+                <div class="header">
+                    Login Page
+                </div>
+
+                 <form name="lform" novalidate>
+
+                    <fieldset>
+                        <div class="form-group first">
+                            <div class="input-group col-sm-12">
+                            <span class="icon icon-mail"></span>&nbsp;Email
+                     <input type="text" ng-model=" login.email" class="form-control"  
+                      placeholder="Enter E-mail" name="email" required/>
+              <span ng-show="lform.$dirty && lform.email.$error.required">This is a required field</span>
+              <span ng-show="lform.$dirty && lform.email.$error.minlength">Minimum length required is 4</span>
+              <span ng-show="lform.$dirty && lform.email.$invalid">This field is invalid </span><br/><br/>
+                 <span class="icon icon-lock"></span>&nbsp;Password
+                 <input type="password"  name="password" ng-model="login.password" class="form-control input-lg" placeholder=" Enter Password" required  />
+              <span ng-show="lform.$dirty && lform.password.$error.required">This is a required field</span>
+              <span ng-show="lform.$dirty && lform.password.$error.minlength">Minimum length required is 4</span>
+              <span ng-show="lform.$dirty && lform.password.$invalid">This field is invalid </span><br/><br/>
+                  
+
+                 <button type="submit" class="btn btn-primary col-xs-12"  
+               ng-click="loginVal(login)" ng-disabled="lform.$invalid">
+                 Login</button>
+            <a href="#register"><button type="submit" class="btn btn-primary col-xs-12">Register</button></a>
+            
+               <a href="#resetpassword">ResetPassword?</a>
+                                </div>
+                        </div>
+                     </fieldset>
+
+                </form>
+        
+        </div>
+    </div>
+    </div>
+
